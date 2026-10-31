@@ -1,13 +1,12 @@
 :root {
   --bg: #050505;
   --bg-soft: #0d0d0d;
-  --panel: rgba(10, 10, 10, 0.8);
   --gold: #d9b768;
   --gold-soft: #f7d98d;
-  --white: #f3efe9;
-  --muted: rgba(255, 255, 255, 0.78);
-  --line: rgba(217, 183, 104, 0.74);
-  --shadow: rgba(0, 0, 0, 0.4);
+  --white: #f4efe9;
+  --muted: rgba(255, 255, 255, 0.8);
+  --line: rgba(217, 183, 104, 0.72);
+  --shadow: rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -31,11 +30,6 @@ a {
   text-decoration: none;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--gold-soft);
-  outline-offset: 4px;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -47,7 +41,7 @@ img {
   background: rgba(0, 0, 0, 0.96);
   border-left: 2px solid rgba(217, 183, 104, 0.6);
   border-right: 2px solid rgba(217, 183, 104, 0.6);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
 }
 
 .topbar {
@@ -161,7 +155,7 @@ img {
   min-height: 670px;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.36) 36%, rgba(0, 0, 0, 0.36) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.4) 36%, rgba(0, 0, 0, 0.4) 100%),
     url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1800&q=80")
       center center / cover no-repeat;
   border-bottom: 2px solid var(--line);
@@ -237,7 +231,11 @@ img {
 }
 
 .hero-actions {
-  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 32px;
 }
 
 .btn-primary {
@@ -267,31 +265,6 @@ img {
   min-height: 420px;
 }
 
-.about {
-  padding: 38px 24px;
-  text-align: center;
-  background: var(--bg-soft);
-  border-bottom: 2px solid var(--line);
-}
-
-.section-title {
-  margin: 0;
-  color: var(--gold-soft);
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  letter-spacing: 0.04em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.about p {
-  max-width: 720px;
-  margin: 14px auto 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
 .features {
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
@@ -299,10 +272,6 @@ img {
   padding: 24px 24px 18px;
   background: rgba(0, 0, 0, 0.9);
   border-bottom: 2px solid var(--line);
-}
-
-.features .section-title {
-  grid-column: 1 / -1;
 }
 
 .feature-card {
@@ -471,8 +440,8 @@ img {
   }
 
   .hero-actions {
-    display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .btn-primary {
