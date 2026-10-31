@@ -1,22 +1,14 @@
-# Donas da Taça
+# Donas da Taça — site institucional
 
-Site estático institucional da Donas da Taça, feito com HTML e CSS.
-
-## Pré-visualizar localmente
-
-Abra `index.html` no navegador ou execute na raiz do projeto:
-
-```bash
-python3 -m http.server 8000
-```
-
-Depois, acesse `http://localhost:8000`.
+Site estático, sem banco de dados e sem dependências de build. Pode ser publicado no Vercel, Netlify ou GitHub Pages.
 
 ## Publicar no Vercel
+1. Descompacte esta pasta.
+2. Envie os arquivos `index.html` e `style.css` para um repositório no GitHub.
+3. No Vercel, escolha **Add New → Project**, importe o repositório e clique em **Deploy**.
+4. Depois da publicação, em **Settings → Domains**, adicione o domínio próprio e siga os registros DNS que o Vercel indicar.
 
-1. Envie `index.html`, `styles.css` e este README para o repositório no GitHub.
-2. No Vercel, importe esse repositório.
-3. Use a pasta raiz como diretório do projeto e selecione **Other** como framework.
-4. Não configure comando de build nem diretório de saída: o Vercel servirá o `index.html` diretamente.
-
-Não é necessário `vercel.json` para este site estático.
+## Antes de divulgar
+- Confirmar se o endereço está escrito exatamente como consta no cadastro/localização.
+- Trocar os elementos visuais ilustrativos por fotos reais da Donas da Taça, se desejado.
+- O site não inclui atendimento online; o botão principal abre a busca de rota no Google Maps.
